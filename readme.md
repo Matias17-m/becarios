@@ -1,4 +1,4 @@
-¡Listo, Matias! Acá tenés tu README.md completo, profesional y didáctico, listo para subir a tu repositorio en GitHub. Refleja todo lo que hiciste hasta ahora y deja la puerta abierta para seguir mejorando el proyecto.
+
 
 # 📚 Consulta de Becarios - Proyecto Full Stack
 
