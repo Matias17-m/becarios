@@ -1,0 +1,98 @@
+CONSULTA DE BECARIOS - DOCUMENTACIÓN DEL PROYECTO
+
+Objetivo:
+Desarrollar una aplicación web full stack que permita consultar becarios desde una base de datos SQLite, utilizando React en el frontend y Express en el backend.
+
+------------------------------------------------------------
+Estructura del Proyecto:
+
+prueba-becarios/
+├── backend/              → Servidor Express
+│   ├── index.js
+│   └── package.json
+├── frontend/             → App React
+│   ├── src/
+│   │   ├── App.js
+│   │   └── Becarios.js
+│   └── package.json
+├── becal_sqlite.db       → Base de datos SQLite
+
+------------------------------------------------------------
+Tecnologías utilizadas:
+
+- Frontend: React + Axios
+- Backend: Node.js + Express + SQLite3
+- Base de datos: SQLite (tabla BECAL_IMPORTADO)
+- Entorno: Visual Studio Code + PowerShell + Opera GX
+
+------------------------------------------------------------
+Pasos realizados:
+
+1. Crear estructura de carpetas
+   mkdir prueba-becarios
+   cd prueba-becarios
+   mkdir backend frontend
+
+2. Inicializar el backend con Express y SQLite
+   cd backend
+   npm init -y
+   npm install express sqlite3 cors
+
+3. Crear archivo index.js con:
+   - Configuración de Express en puerto 3001
+   - Conexión a becal_sqlite.db
+   - Ruta /becarios que consulta la tabla BECAL_IMPORTADO
+
+4. Verificar la base de datos SQLite
+   - Confirmar que becal_sqlite.db existe en la raíz
+   - Verificar que contiene la tabla BECAL_IMPORTADO
+   - Solucionar error SQLITE_ERROR cambiando la consulta
+
+5. Crear el frontend con React
+   cd ../frontend
+   npx create-react-app .
+   npm install axios
+
+6. Crear componente Becarios.js
+   - Usa axios para consultar el backend
+   - Muestra los datos en una lista
+
+7. Integrar Becarios.js en App.js
+
+8. Ejecutar backend y frontend
+   # En backend/
+   node index.js
+
+   # En frontend/
+   npm start
+
+9. Verificar en el navegador
+   - Backend: http://localhost:3001/becarios → muestra JSON
+   - Frontend: http://localhost:3000 → muestra lista de becarios
+
+10. Solución de errores
+   - Error 500: corregido cambiando la ruta y nombre de tabla
+   - SQLITE_ERROR: solucionado al usar BECAL_IMPORTADO
+   - DevTools en Opera GX: se usó Ctrl + Shift + I
+
+------------------------------------------------------------
+Resultado final:
+
+- Backend funcional con Express y SQLite
+- Frontend React mostrando datos correctamente
+- Proyecto listo para agregar filtros, estilos y exportación
+
+------------------------------------------------------------
+Próximos pasos sugeridos:
+
+- Mostrar los datos en una tabla con estilos
+- Agregar filtros por universidad, país o programa
+- Exportar resultados a Excel o PDF
+- Preparar presentación o video explicativo
+
+------------------------------------------------------------
+Autor:
+
+Matias  
+Estudiante de Ingeniería en Informática  
+Apasionado por sistemas operativos, desarrollo full stack y comunicación técnica
