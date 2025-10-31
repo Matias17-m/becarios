@@ -9,10 +9,11 @@ app.use(cors());
 const db = new sqlite3.Database('../becal_sqlite.db');
 
 app.get('/becarios', (req, res) => {
-  db.all('SELECT DISTINCT * FROM BECAL_IMPORTADO', [], (err, rows) => {
+  db.all('SELECT * FROM BECAL_IMPORTADO', [], (err, rows) => {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
+      console.log(`Total de becarios recuperados: ${rows.length}`);
       res.json(rows);
     }
   });
